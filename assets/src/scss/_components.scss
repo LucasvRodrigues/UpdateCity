@@ -1,0 +1,164 @@
+span.destaque {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    .icon {
+        padding: 1.4rem;
+        border: 0.03rem solid #fbfafc;
+        border-radius: 1.2rem;
+        margin-right: 1.2rem;
+        img {
+            width: 1.6rem;
+            height: 1.6rem;
+            min-width: 1.6rem;
+            min-height: 1.6rem;
+            max-width: 1.6rem;
+            max-height: 1.6rem;
+            object-fit: contain;
+        }
+    }
+    small {
+        width: 100%;
+        max-width: 22rem;
+    }
+}
+
+.formulario {
+    position: relative;
+    z-index: 1;
+    padding: 3.2rem 2.4rem;
+    background-color: $white-100;
+    box-shadow: 0px 0px 1.2rem rgba(0, 0, 0, 0.25);
+    border-radius: 1.2rem;
+    .t-forms {
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+    }
+    form {
+        margin-top: 1.6rem;
+        br {
+            height: 0;
+            display: none;
+        }
+        p {
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+            span {
+                width: 100%;
+                display: block;
+                input {
+                    font-family: "Nunito";
+                    font-weight: 400;
+                    font-size: 1.6rem;
+                    line-height: 2.2rem;
+                    letter-spacing: 0.01em;
+                    color: $black-100;
+                    width: 100%;
+                    padding: 1.6rem;
+                    border: 0.05rem solid #d1d1d1;
+                    -webkit-border-radius: 1.2rem;
+                    border-radius: 1.2rem;
+                    background-color: $white-100;
+                    transition: all 0.2s linear;
+                    &:focus {
+                        border-color: $color-primary;
+                        transition: all 0.2s linear;
+                        &::placeholder {
+                            color: $color-primary;
+                            transition: all 0.2s linear;
+                        }
+                    }
+                }
+            }
+            .wpcf7-spinner {
+                display: none;
+            }
+            #submit {
+                -webkit-appearance: none;
+                width: 100%;
+                padding: 16px 32px !important;
+                -webkit-padding: 16px 32px !important;
+                background-color: $color-primary;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+        &.invalid {
+            .wpcf7-response-output {
+                background-color: #ffbb005f;
+                padding: 0.8rem !important;
+                border: 1px solid #ffb900;
+                border-radius: 0.4rem;
+                color: $black-100;
+            }
+        }
+        &.sent {
+            .wpcf7-response-output {
+                padding: 0.8rem !important;
+                background-color: #46b44fa0;
+                border: 1px solid #46b450;
+                border-radius: 0.4rem;
+                color: $black-100;
+            }
+        }
+    }
+    @keyframes mp_fade_out {
+        0% {
+            opacity: 1;
+        }
+        90% {
+            opacity: 0;
+        }
+        100% {
+            display: none;
+        }
+    }
+    @keyframes mp_fade_in {
+        0% {
+            display: block;
+            opacity: 0;
+        }
+        90% {
+            opacity: 1;
+        }
+        100% {
+            display: 1;
+        }
+    }
+    @include responsive(576px) {
+        padding: 2.4rem;
+    }
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.modal{
+    .btn-close{
+        position: absolute;
+        top: 3.2rem;
+        right: 3.2rem;
+        width: 2.8rem;
+        height: 2.8rem;
+        transition: all .2s linear;
+
+        &:hover{
+            cursor: pointer;
+            transform: rotate(90deg);
+            transition: all .2s linear;
+        }
+    }
+}

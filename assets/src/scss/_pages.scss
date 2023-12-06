@@ -1,0 +1,285 @@
+// Obrigado
+
+.page-template-obrigado {
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: $black-100;
+}
+.s-hero-obrigado {
+    padding: 20rem 0 16rem 0;
+    // background-color: $black-100;
+    background: $black-100 url("../../dist/image/jpeg/bg-obrigado.jpg");
+    background-repeat: no-repeat;
+    background-size: contain 100%;
+    background-position: right center;
+    position: relative;
+    #particles-js {
+        z-index: 1;
+        opacity: 0.3;
+    }
+    &::after {
+        content: "";
+
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        background: linear-gradient(360deg, #1d1822 18.54%, rgba(29, 24, 34, 0) 62.61%),
+            linear-gradient(270deg, #1d1822 0%, rgba(29, 24, 34, 0.0572917) 24.48%, rgba(29, 24, 34, 0) 100%),
+            linear-gradient(302.29deg, #1d1822 11.63%, rgba(29, 24, 34, 0.09375) 37.49%, rgba(29, 24, 34, 0) 69.36%),
+            linear-gradient(
+                192.42deg,
+                #1d1822 3.43%,
+                rgba(29, 24, 34, 0) 41.44%,
+                rgba(29, 24, 34, 0) 53.14%,
+                rgba(29, 24, 34, 0) 65.81%
+            ),
+            linear-gradient(
+                90deg,
+                #1d1822 22.4%,
+                rgba(29, 24, 34, 0.8) 41.15%,
+                rgba(29, 24, 34, 0) 63.02%,
+                rgba(29, 24, 34, 0) 100%
+            ),
+            rgba(29, 24, 34, 0.6);
+    }
+    .row {
+        > * {
+            position: relative;
+            z-index: 2;
+        }
+        .unico {
+            font-family: "Nunito";
+            font-weight: 700;
+            font-size: 1.2rem;
+            line-height: 4.7rem;
+            letter-spacing: 0.05em;
+            color: $white-100;
+            text-shadow: 0px 0rem 2.4rem rgba(0, 0, 0, 0.5);
+            display: block;
+            margin-bottom: 4.8rem;
+        }
+        h1 {
+            margin-bottom: 2.4rem;
+            span {
+                color: $color-primary;
+            }
+        }
+    }
+
+    .scroll {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto auto 0rem auto;
+        opacity: 0.7;
+        object-fit: cover;
+        animation: floating_scroll 1.5s ease-in-out infinite;
+        z-index: 2;
+        width: fit-content;
+        height: fit-content;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    @include responsive(1400px) {
+        background: url("../../dist/image/jpeg/bg-obrigado.jpg") 13rem center no-repeat rgb(29, 24, 34);
+    }
+    @include responsive(1140px) {
+        background: url("../../dist/image/jpeg/bg-obrigado.jpg") 3rem center no-repeat rgb(29, 24, 34);
+    }
+    @include responsive(890px) {
+        background: url("../../dist/image/jpeg/bg-obrigado.jpg") -14rem center no-repeat rgb(29, 24, 34);
+    }
+    @include responsive(890px) {
+        background: url("../../dist/image/jpeg/bg-obrigado.jpg") -37rem center no-repeat rgb(29, 24, 34);
+    }
+    @include responsive(560px) {
+        padding: 9.6rem 0;
+        background: url("../../dist/image/jpeg/bg-obrigado.jpg") center/cover no-repeat rgb(29, 24, 34);
+        &::after {
+            background: linear-gradient(
+                    270deg,
+                    rgba(29, 24, 34, 0) 0%,
+                    rgba(29, 24, 34, 0) 50%,
+                    rgba(29, 24, 34, 0.7) 100%
+                ),
+                linear-gradient(90deg, rgba(29, 24, 34, 0) 0%, rgba(29, 24, 34, 0) 50%, rgba(29, 24, 34, 0.7) 100%),
+                linear-gradient(180deg, rgba(29, 24, 34, 0) 0%, #1d1822 96.87%), rgba(29, 24, 34, 1);
+        }
+        .row {
+            .unico {
+                margin-bottom: 1.6rem;
+                text-align: center;
+            }
+            h1 {
+                margin-bottom: 0.8rem;
+                text-align: center;
+            }
+            p {
+                text-align: center;
+            }
+        }
+    }
+}
+.s-passos-obrigado {
+    padding-top: 9rem;
+    padding-bottom: 14rem;
+    background-color: $black-100;
+    .container {
+        .time-line {
+            &.sm {
+                display: none;
+            }
+            &.lg {
+                display: block;
+                height: 0.1rem;
+                width: 100%;
+                background: linear-gradient(90deg, #8e1cff 0%, #8f35e9 26.56%, #9487a0 47.4%, #9487a0 100%);
+                position: relative;
+                animation: progress-pg-obrigado 1s forwards ease-in-out;
+                .items {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    margin-top: -0.7rem;
+                    .item {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                        width: 100%;
+                        max-width: 15rem;
+                        position: relative;
+                        opacity: 0;
+                        animation: mp-fade-down 1s forwards ease-in-out;
+                        &:first-child {
+                            left: -75px;
+                            animation-delay: 0.5s;
+                            &::before {
+                                background-color: $color-primary;
+                            }
+                        }
+                        &:nth-child(2) {
+                            animation-delay: 1s;
+                        }
+                        &:last-child {
+                            right: -75px;
+                            animation-delay: 1.5s;
+                        }
+                        p {
+                            color: $white-200;
+                        }
+                        &::before {
+                            content: "";
+
+                            width: 1.5rem;
+                            height: 1.5rem;
+
+                            border-radius: 100%;
+
+                            background-color: $white-200;
+
+                            display: block;
+                            margin-bottom: 1.2rem;
+                        }
+                        &:has(strong) {
+                            p {
+                                color: $white-100;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include responsive(1140px) {
+        .container {
+            .time-line {
+                &.lg {
+                    .items {
+                        .item {
+                            width: fit-content;
+                            max-width: 100%;
+                            &:first-child {
+                                left: 0px;
+                            }
+                            &:last-child {
+                                right: 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include responsive(576px) {
+        padding: 4.8rem 0;
+        .container {
+            .time-line {
+                &.lg {
+                    display: none;
+                }
+                &.sm {
+                    display: block;
+                    .items {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 2.4rem;
+                        .item {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            text-align: center;
+                            opacity: 0;
+                            animation: mp-fade-down 1s forwards ease-in-out;
+                            &:first-child {
+                                animation-delay: 0.5s;
+                                &::after {
+                                    background: linear-gradient(180deg, #8e1cff 0%, #9487a0 100%);
+                                }
+                            }
+                            &:nth-child(2){
+                                animation-delay: 1s;
+                            }
+                            &:last-child {
+                                animation-delay: 1.5s;
+
+                                &::after {
+                                    display: none;
+                                }
+                            }
+                            p {
+                                strong {
+                                    color: $color-primary;
+                                }
+                            }
+                            &::after {
+                                content: "";
+                                display: block;
+                                margin-top: 2.4rem;
+
+                                width: 0.1rem;
+                                height: 4.8rem;
+
+                                background-color: $white-200;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

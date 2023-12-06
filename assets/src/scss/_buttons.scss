@@ -1,0 +1,67 @@
+.btn-destaque {
+    width: 17rem;
+    height: 17rem;
+    border-radius: 1.2rem;
+    background-color: $color-primary;
+
+    display: flex;
+    align-items: flex-end;
+
+    color: $white-100;
+    font-weight: 700;
+    padding: 1.6rem;
+
+    position: relative;
+
+    transition: all 0.2s linear;
+    &::after {
+        content: "";
+
+        width: 3.8rem;
+        height: 3.8rem;
+
+        background: url("../image/svg/arrow.svg") center/contain no-repeat;
+
+        display: block;
+        position: absolute;
+        top: 0.6rem;
+        right: 0.6rem;
+
+        transition: all 0.2s linear;
+    }
+    &:hover {
+        padding: 1rem;
+        background: $color-secondary;
+        box-shadow: 0rem 0rem 2.4rem rgba(112, 27, 197, 0.5);
+        transform: scale(1.02);
+        transition: all 0.2s linear;
+        &::after {
+            top: -0rem;
+            right: -0rem;
+            transition: all 0.2s linear;
+        }
+    }
+}
+
+.btn-primary {
+    background: $color-primary;
+    box-shadow: 0px 0px 1.2rem rgba(142, 28, 255, 0.25);
+    border-radius: 1.2rem;
+    padding: 1.6rem 3.2rem;
+    color: $white-100;
+    width: fit-content;
+    font-weight: 700;
+    transition: all 0.2s linear;
+    &:hover {
+        background: $color-secondary;
+        box-shadow: 0px 0px 1.2rem rgba(142, 28, 255, 0);
+        transform: scale(1.02);
+        transition: all 0.2s linear;
+    }
+}
+
+.btn-tertiary {
+    padding: 1.2rem 2.4rem;
+    border: 0.5px solid #b3b3b3;
+    border-radius: 0.8rem;
+}

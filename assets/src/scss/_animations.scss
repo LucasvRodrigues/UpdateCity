@@ -1,0 +1,76 @@
+.mp_pisca {
+    animation: pisca 1s 5 1s alternate linear;
+}
+@keyframes pisca {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.3;
+    }
+}
+.mp_float {
+    animation: float 7s ease-in-out infinite;
+}
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(30px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+.mp_float_reverse {
+    animation: float_reverse 7s ease-in-out infinite;
+}
+@keyframes float_reverse {
+    0% {
+        transform: translatey(30px);
+    }
+
+    50% {
+        transform: translatey(0px);
+    }
+
+    100% {
+        transform: translatey(30px);
+    }
+}
+
+@keyframes floating_scroll {
+    0% {
+        transform: translatey(0px)
+    }
+
+    50% {
+        transform: translatey(-5px)
+    }
+
+    100% {
+        transform: translatey(0px)
+    }
+}
+
+@keyframes  mp-fade-down {
+    0%{
+        transform: translateY(3rem);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+}
+@keyframes  progress-pg-obrigado {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}

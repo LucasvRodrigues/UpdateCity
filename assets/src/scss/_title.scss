@@ -1,0 +1,95 @@
+// @font-face {
+//   font-family: Nunito;
+//   src: url(../fonts/nunito/Nunito-ExtraLight.ttf);
+//   font-weight: 200;
+// }
+@font-face {
+  font-family: Nunito;
+  src: url(../fonts/nunito/Nunito-Light.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: Nunito;
+  src: url(../fonts/nunito/Nunito-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Nunito;
+  src: url(../fonts/nunito/Nunito-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: Nunito;
+  src: url(../fonts/nunito/Nunito-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: Nunito;
+  src: url(../fonts/nunito/Nunito-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Helvetica;
+  src: url(../fonts/helvetica/helvetica-bold.ttf);
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+p,
+small {
+  letter-spacing: 0.01em;
+}
+h1 {
+  font-weight: 700;
+  font-size: 4.4rem;
+  line-height: 4.7rem;
+  color: $white-100;
+}
+h2 {
+  font-weight: 600;
+  font-size: 3.2rem;
+  line-height: 120%;
+  color: $black-100;
+}
+h3 {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  color: $black-100;
+}
+p,
+a,
+li {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 130%;
+  color: $white-200;
+}
+small {
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  color: $white-200;
+}
+strong {
+  font-weight: 700;
+}
+@include responsive(786px){
+  h1{
+    font-size: 3.8rem;
+    line-height: 3.8rem;
+  }
+}
+
+@include responsive(576px){
+  h1{
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+  }
+  h2{
+    font-size: 2.4rem;
+  }
+}
